@@ -1,40 +1,36 @@
 {
-  "title": "Spotify Rewire",
-  "rules": [
-    {
-      "description": "Maps the play pause media key to an osa script. Before working you need to disable the rcp helper which effectively breaks the play pause keys normal function\n$ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist  \n",
-      "manipulators": [
+    "description": "Spotify Rewire",
+    "manipulators": [
         {
-          "type": "basic",
-          "from": { "key_code": "f7" },
-          "to": [
-            {
-              "shell_command": "/Users/ralphcallaway/Development/spotify_play_pause/prevtrack.sh",
-              "repeat": false
-            }
-          ]
+            "description": "Maps the play pause media key to an osa script. Before working you need to disable the rcp helper which effectively breaks the play pause keys normal function\n$ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist",
+            "from": { "key_code": "f7" },
+            "to": [
+                {
+                    "repeat": false,
+                    "shell_command": "/Users/YOUR_USERNAME_HERE/Development/spotify_play_pause/prevtrack.sh"
+                }
+            ],
+            "type": "basic"
         },
         {
-          "type": "basic",
-          "from": { "key_code": "f8" },
-          "to": [
-            {
-              "shell_command": "/Users/ralphcallaway/Development/spotify_play_pause/playpause.sh",
-              "repeat": false
-            }
-          ]
+            "from": { "key_code": "f8" },
+            "to": [
+                {
+                    "repeat": false,
+                    "shell_command": "/Users/YOUR_USERNAME_HERE/Development/spotify_play_pause/playpause.sh"
+                }
+            ],
+            "type": "basic"
         },
         {
-          "type": "basic",
-          "from": { "key_code": "f9" },
-          "to": [
-            {
-              "shell_command": "/Users/ralphcallaway/Development/spotify_play_pause/nexttrack.sh",
-              "repeat": false
-            }
-          ]
+            "from": { "key_code": "f9" },
+            "to": [
+                {
+                    "repeat": false,
+                    "shell_command": "/Users/YOUR_USERNAME_HERE/Development/spotify_play_pause/nexttrack.sh"
+                }
+            ],
+            "type": "basic"
         }
-      ]
-    }
-  ]
+    ]
 }
